@@ -9,19 +9,19 @@
 <body>
 
     <div id="todo">
-        <input v-model="message">
+        <input v-model="message" v-bind:placeholder="placeholder">
         <button v-on:click="addTodo">Add</button>
         <table>
             <thead>
                 <tr>
                     <th>
-                        Number
+                        ID
                     </th>
                     <th>
-                        Element
+                        Content
                     </th>
                     <th>
-                        Added on
+                        Timestamp
                     </th>
                 </tr>
             </thead>
