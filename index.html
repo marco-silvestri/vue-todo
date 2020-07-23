@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Remember the Vue</title>
+</head>
+<body>
+
+    <div id="todo">
+        <input v-model="message">
+        <button v-on:click="addTodo">Add</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Number
+                    </th>
+                    <th>
+                        Element
+                    </th>
+                    <th>
+                        Added on
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="todo in todos">
+                    <td>
+                        {{ todo.id }}
+                    </td>
+                    <td>
+                        {{ todo.text }}
+                    </td>
+                    <td>
+                        {{ todo.ts }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
